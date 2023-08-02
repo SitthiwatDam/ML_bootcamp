@@ -1,0 +1,10 @@
+version: '3'                                            #docker version
+services:
+  dev:
+    image: mlbootcamp:lastest                           #name of container
+    build: 
+      context: .
+      dockerfile: .Dockerfile                           #same as name as the docker's file in your project.
+    volumes:                                            #host path for sharing and prevent container destoyed without saved data
+      - ./source_code:/root/code                        #mapping path in container (you will have the source_code folder in host and code folder in container which the file in code would appear in source_code)
+      - ./vscode-server-extension:/root/.vscode-server  #mapping for vscode extension
