@@ -1,2 +1,4 @@
 vscode-server-extension
 source_code/logs/*
+
+!.keeps
